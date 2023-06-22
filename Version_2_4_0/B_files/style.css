@@ -1,0 +1,172 @@
+ 
+/* Content */
+body{
+	color:#FFFFFF;
+	background:#000000;
+	font-size: 1em;
+	-ms-content-zooming: none;
+	/*font-family: Tiresias Keyfont V2;*/
+}
+
+#contents{
+	font-family: sans-serif;
+	word-spacing: 0.5em;
+	letter-spacing: 0.1em;
+	line-height: 150%;
+	text-align: justify;
+	/*text-align-last: center;*/
+}
+p.Contents{
+	text-indent: 1em;
+}
+
+#MainField{
+	max-width: 20em;
+	margin: auto;
+}
+
+em {
+	font-family: serif;
+}
+
+SPAN.VerseNum{
+	color: #00ff00;
+	font-style: italic;
+	/*font-family: serif;*/
+}
+
+/* Navigation */
+
+/*    Navigation */
+input,select{
+	font-size: 1em;
+	background-color: #d3d3ff;
+	border-radius: 0.6em;
+	border-width: 0px;
+	margin: 0.2em;
+	padding: 0.3em;
+}
+
+input:hover,select:hover{
+	background-color: #bbbbff;
+}
+
+#status{
+	background:#222222;
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:5em;
+	/*padding:0.5em;*/
+}
+
+#btmstatus{
+	background:#222222;
+	position:fixed;
+	left:0px;
+	top: calc(100vh - 4em);
+	width:100%;
+	height:2em;
+	padding:1em;
+}
+
+/*    Search */
+
+@media only screen and (max-width: 30em) {
+	#Search{
+		background:#000000;
+		position:fixed;
+		margin: none;
+		padding: 3px;
+		width:100%;
+		box-shadow:  0px 0px 1em white;
+	}
+}
+
+@media only screen and (min-width: 30em) {
+	/* For desktops: */
+	#Search{
+		background:#000000;
+		position:fixed;
+		border-radius: 0.5em;
+		left:50%;
+		top:50vh;
+		transform: translate(-50%, -50%);
+		padding: 3px;
+		width:30em;
+		box-shadow:  0px 0px 1em white;
+	}
+}
+
+#searchBox{
+	width: calc(100% - 6px - 5em);
+	cursor: text;
+	padding: 3px;
+	margin: 3px;
+	white-space:nowrap;
+}
+
+#SearchHighLight{
+   color:#ff00ff;
+}
+
+.does{
+	color: #00ff00;
+}
+
+span.SearchResult{
+	background: #444444;
+	/*border-top: 1px solid #888888;
+	border-bottom: 1px solid #888888;*/
+	border-radius: 10px;
+	margin:2px;
+	color:#FFFFFF;
+	cursor:default;
+	display:block;
+	padding:10px;
+	/*margin:10px;*/
+}
+
+span.SearchResult:hover, span.SearchResult:active{
+	text-decoration: none;
+	color:#eeeeFF;
+	text-shadow: 0px 0px 1em white;
+	/*background: #555555;*/
+	/*cursor:text;*/
+}
+
+#BottomGap {
+	width: 100%;
+	height: 100vh;
+}
+#TopGap {
+	width: 100%;
+	height: 6em;
+	/*background-color: green;*/
+}
+/* Hidden */
+div.searchoptionscolumn{
+	width: 33.33%;
+	float: left;
+	white-space: nowrap;
+}
+
+span.radiospan, span.checkboxspan{
+	cursor:  default;
+	overflow:  hidden;
+}
+span.radiospan:hover, span.checkboxspan:hover{
+	/*color: #00ff00;*/
+	text-shadow: 0px 0px 1em white;
+	/*font-weight: bold;*/
+	overflow:visible;
+}
+
+#MyCode{
+	margin:10;
+	border: 2px solid #Ff0;
+	padding:10;
+	font-family:Courier New;
+	font-size:20;
+}

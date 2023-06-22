@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <canvas id="myCanvas" width="1024" height="512" style="border:1px solid grey"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+//canvas.height = canvas.width;
+
+var imgData = ctx.createImageData(256, 256);
+for(var x=0;x<255;x++){
+    for(var y=0;y<255;y++){
+        imgData.data[x*4 + (y*1024) + 0] = 255-x;
+        imgData.data[x*4 + (y*1024) + 1] = y;
+        imgData.data[x*4 + (y*1024) + 2] = 0;
+        imgData.data[x*4 + (y*1024) + 3] = 255;
+    }
+}
+ctx.putImageData(imgData, 0, 256);
+
+for(var x=0;x<255;x++){
+    for(var y=0;y<255;y++){
+        imgData.data[x*4 + (y*1024) + 0] = 0;
+        imgData.data[x*4 + (y*1024) + 1] = y;
+        imgData.data[x*4 + (y*1024) + 2] = x;
+        imgData.data[x*4 + (y*1024) + 3] = 255;
+    }
+}
+ctx.putImageData(imgData, 256, 256); 
+
+for(var x=0;x<255;x++){
+    for(var y=0;y<255;y++){
+        imgData.data[x*4 + (y*1024) + 0] = 255-x;
+        imgData.data[x*4 + (y*1024) + 1] = 0;
+        imgData.data[x*4 + (y*1024) + 2] = 255-y;
+        imgData.data[x*4 + (y*1024) + 3] = 255;
+    }
+}
+ctx.putImageData(imgData, 0, 0);
+
+var imgData2 = ctx.createImageData(512, 512);
+
+var xt,yt,xd,yd,stl;
+for(var x=0;x<511;x++){
+	for(var y=0;y<511;y++){
+        yt=Math.sqrt((x-255)**2+((y-255)**2))
+    	xt=(x-255)/yt;
+        xt=Math.acos(xt)
+        if(((y-255)/yt)>0){
+            xt=Math.PI*2-xt;
+        }
+        xt=(xt/Math.PI/2);
+        yt/=255;
+        xt*=3;
+        //xt+=1/3;
+        xt%=3;
+        if(xt<1){
+            stl=0
+        }else if(xt<2){
+            stl=1
+        }else{
+            stl=2
+        }
+        xt%=1;
+        xd=yt-((xt-0.5)*yt*2);
+        yd=yt+((xt-0.5)*yt*2);
+        if(xd>1 | yd>1){
+		    //imgData2.data[x*4 + (y*2048) + 3] = 0;
+            continue;
+        }
+        //alert(xt);
+		//Math.asin(x2/128)/pi/2;
+        switch(stl){
+            case 0:
+                imgData2.data[x*4 + (y*2048) + 0] = xd*255;
+                imgData2.data[x*4 + (y*2048) + 1] = yd*255;
+                imgData2.data[x*4 + (y*2048) + 2] = 0;
+                break;
+            case 1:
+                imgData2.data[x*4 + (y*2048) + 0] = 0;
+                imgData2.data[x*4 + (y*2048) + 1] = xd*255;
+                imgData2.data[x*4 + (y*2048) + 2] = yd*255;
+                break;
+            case 2:
+                imgData2.data[x*4 + (y*2048) + 0] = yd*255;
+                imgData2.data[x*4 + (y*2048) + 1] = 0;
+                imgData2.data[x*4 + (y*2048) + 2] = xd*255;
+                break;
+        }
+		imgData2.data[x*4 + (y*2048) + 3] = 255;
+	}
+}
+ctx.putImageData(imgData2, 0, 0);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

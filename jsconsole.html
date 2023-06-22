@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<!-- This document is in english (In canada)-->
+
+<head>
+  <title>Page Title</title><!-- This shows as the title -->
+  <style>
+    body {
+      background-color: powderblue;
+    }
+
+    h1 {
+      color: blue;
+    }
+
+    p.WereLast {
+      color: red;
+      font-family: sans;
+      font-size: 2em;
+      border: 3px solid green;
+      padding: 30px;
+      margin: 50px
+    }
+  </style>
+  <link rel="stylesheet" href="./html/styles.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+
+<body>
+
+  <h1 id="TopOfDocument">This is a Heading</h1>
+  <p>This is a paragraph.<br>
+  And it has a linebreak in it.</p>
+  <h2>This is a sub Heading</h2>
+
+  <p><a href="https://justicebibleapp.w3spaces.com">This is a link</a></p>
+  <p><img src="ImagePathAndName.jpg" alt="Text To Show If This Image Can't Load" width="104" height="142"></p>
+
+  <p>This is a <br> paragraph with a line break.</p>
+  <p style="color:red;">This is a red paragraph.</p>
+  <p title="I'm a tooltip">This is a paragraph. If you put the mouse over, then it'll show you info on this element.
+  </p>
+  <h1>This is heading 1</h1>
+  <p>This is some text.</p>
+  <hr>
+  <h2>This is heading 2</h2>
+  <p>This is some other text.</p>
+  <hr>
+  <pre>
+    My Bonnie lies over the ocean.
+
+    My Bonnie lies over the sea.
+
+    My Bonnie lies over the ocean.
+
+    Oh, bring back my Bonnie to me.
+    </pre>
+  <!--This shows as you see it here "preformatted"-->
+  <div>
+    <h2>When you write sometimes you want text to look differant</h2>
+    <p>Here we might want some <b>bold text.</b></p>
+    <p>For example text might be <strong>important</strong></p>
+    <p>Or we might want some <i>italicized text</i><br>
+        If we want something <em>Emphasized.</em></p>
+    <p>Or <mark>Marked</mark>, <small>Small</small>, <del>Deleted</del>, <ins>Inserted</ins>, <sub>Subscript</sub>,
+      <sup>Superscript</sup>
+    </p>
+  </div>
+  <div>
+    <h2>Lets <q>quote</q> some text</h2>
+    <p>Here's my favorite verse from the bible:</p>
+    <blockquote>
+      For where two or three<br>
+      are gathered together in my<br>
+      name, there am I in the<br>
+      midst of them. <em>(MATTHEW  18:20, KJV)</em>
+    </blockquote>
+    <p>This document was written in <abbr title="Hyper Text Markup Language">HTML</abbr>(Hyper Text Markup Language).
+    </p>
+    <address>
+      Written by Justice Vellacott.<br>
+      justiceman@programmer.net<br>
+      615 Dundas St, Woodstock, ON, N4S 1E1<br>
+      Canada
+    </address>
+    <p>This docoment includes a verse from <cite>The Bible</cite></p>
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+  </div>
+  <div>
+    <h1>This is for styles</h1>
+    <p class=WereLast>This is weird!</p>
+    <pre>
+      p.WereLast {
+        color: red;
+        font-family: sans;
+        font-size: 2em;
+        border: 3px solid green;
+        padding: 30px;
+        margin: 50px
+      }
+    </pre>
+  </div>
+  <div>
+    <h2>Links</h2>
+    <a href="https://justicebibleapp.w3spaces.com">Justice Bible App</a><br>
+    <a href="https://justicebibleapp.w3spaces.com" target="_blank" title="Go to Justice Bible App Homepage">Justice
+      Bible App</a><br>
+    <pre>
+      target=
+        _self
+        _blank
+        _parent
+        _top
+    </pre>
+    <a href="mailto:justiceman@programmer.net">Send email</a><br>
+    <p><a href="#TopOfDocument">Top Of Document</a></p>
+  </div>
+  <div>
+    <h2>images</h2>
+    <p><img src="./theImage.png" alt="The image description" width="500" height="600" style="float:right;width:500px;height:600px;" >
+    </p>
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+    <map name="workmap">
+      <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+      <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+      <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+    <p style="background-image: url('img_girl.jpg');">
+      <picture>
+        <source media="(min-width: 650px)" srcset="img_food.jpg">
+        <source media="(min-width: 465px)" srcset="img_car.jpg">
+        <img src="img_girl.jpg" style="width:auto;">
+      </picture>
+    </p>
+  </div>
+  <div>
+    <h1>Tables</h1>
+    <p></p>
+    <table>
+      <colgroup>
+        <col span="2" style="background-color: #D6EEEE">
+      </colgroup>
+      <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+      </tr>
+      <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+      </tr>
+      <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h1>Lists</h1>
+    <p>ol
+    </p>
+    <ol type="1" start="0">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ol>
+    <dl>
+      <dt>ol</dt>
+      <dd>- Orderd list</dd>
+      <dt>ul</dt>
+      <dd>- Unorderd list</dd>
+      <dt>li</dt>
+      <dd>- list item</dd>
+      <dt>dl</dt>
+      <dd>- description list</dd>
+      <dt>dt</dt>
+      <dd>- description list item</dd>
+      <dt>dd</dt>
+      <dd>- description of item</dd>
+    </dl>
+    <p>list-style-type:</p>
+    <ul style="list-style-type:circle;">
+      <li>disc</li>
+      <li>circle</li>
+      <li>square</li>
+      <li>none</li>
+    </ul>
+  </div>
+  <div>
+    <iframe src="https://justicebibleapp.w3spaces.com"height="200" width="300"  style="border:2px solid red;" title="Iframe Example" ></iframe>
+  </div>
+  <div>
+    <h2>Computer Code Elements</h2>
+    <p></p>
+    <pre>
+    <code>
+    x = 5;
+    y = 6;
+    z = x + y;
+    </code>
+    </pre>
+    <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+    <p>Message from my computer:</p>
+    <p><samp>File not found.<br>Press F1 to continue</samp></p>
+    <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p> 
+  </div>
+  <div>
+    <p>Choose your favorite Web language:</p>
+    <form action="/action_page.php" target="_blank" method="post">
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+    </form>
+    
+  </div>
+</body>
+
+</html>

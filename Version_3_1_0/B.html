@@ -1,0 +1,67 @@
+ <html lang="en"><head>
+	<meta charset="utf-8">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<meta name="author" content="Justice Vellacott">
+	<meta name="description" content="A Scripture app for viewing and studying the bible.">
+	<meta name="keywords" content="bible, study, bible study, religion &amp; spirituality, christianity, tools for bible study, bible study apps, study bible kjv, king james version, king james version study, kjv study, kjv study app, kjv search, kjv advanced search">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>KJV</title>
+	<link rel="icon" type="image/x-icon" href="/images/My_Bible_glow.ico">
+
+	<script src="./B_files/bible.js"></script>
+	<script src="./B_files/bible_search.js"></script>
+	<script src="./B_files/showfuncs.js"></script>
+	<script src="./B_files/wordsmatches.js"></script>
+	<script src="./B_files/history.js"></script>
+	<script src="./B_files/nav.js"></script>
+	<script src="./B_files/search.js"></script>
+	<script src="./B_files/htmmanip.js"></script>
+	<script src="./B_files/bookmark.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./B_files/style.css">
+
+</head>
+
+<body onload="Load()">
+
+	<div>
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+			<div id="VerseMenu" class="overlay-content">&nbsp;</div>
+		</div>
+		<div id="status"><span id="Search">&nbsp;</span>
+			<center id="Place">
+				<div>
+					<select id="Books">
+						<option></option>
+					</select>
+					<select id="Chaps">
+						<option></option>
+					</select>
+					<select id="Verses">
+						<option></option>
+					</select>
+				</div>
+				<div id="nav"></div>
+
+			</center>
+		</div>
+		<div id="btmstatus">&nbsp;</div>
+
+		<div id="MainField">
+			<div id="TopGap">&nbsp;</div>
+			<center>
+				<div id="BookHead">
+					<h1 id="BookNm"></h1>
+					<h2 id="BookHedr"></h2>
+				</div>
+				<h3 id="ChapNo"></h3>
+			</center>
+			<div id="contents" class="BibleContents">&nbsp;</div>
+			<div id="BottomGap">&nbsp;</div>
+		</div>
+	</div>
+
+
+</body></html>
