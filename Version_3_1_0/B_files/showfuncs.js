@@ -124,7 +124,7 @@ class HistoryPlace {
 		HtmlSearchBox.style.display = "none";
 		if (this.Verse != 0) {
 			window.scrollTo(0, HtmlContent.childNodes[0].childNodes[this.Verse].offsetTop - 100);
-			alert(HtmlContent.childNodes[0].childNodes[this.Verse].offsetTop);
+			//alert(HtmlContent.childNodes[0].childNodes[this.Verse].offsetTop);
 		} else {
 			window.scrollTo(0, 0);
 		}

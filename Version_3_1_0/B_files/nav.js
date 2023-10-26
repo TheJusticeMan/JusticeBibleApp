@@ -5,6 +5,16 @@ var VersVal, ChapVal, BookVal;
 var booksOfTheBible;
 var inSearch = false;
 function Load() {
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker
+			.register('./B_files/service-worker.js')
+			.then((registration) => {
+				console.log('Service Worker registered with scope:', registration.scope);
+			})
+			.catch((error) => {
+			console.error('Service Worker registration failed:', error);
+		});
+	}
 	document.getElementById("VerseMenu")
 	HtmlBookSelector = document.getElementById("Books");
 	HtmlChapSelector = document.getElementById("Chaps");
